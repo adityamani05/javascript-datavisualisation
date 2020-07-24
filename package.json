@@ -1,0 +1,20 @@
+{
+  "name": "javascript-data-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:mountblue/cohort-13-python/dataproject-js-companymaster-aditya.git"
+  },
+  "author": "Aditya",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "http-server": "^0.12.3"
+  }
+}
