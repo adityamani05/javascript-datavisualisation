@@ -35,6 +35,12 @@ function plot_auth_cap_data(auth_cap_data) {
             text: "Histogram of Authorized Cap"
         },
         xAxis: {
+            categories:["< 1 Lac",
+                        "1 Lac - 10 Lac",
+                        "10 Lac - 1 Cr",
+                        "1 Cr - 10 Cr",
+                        "10 Cr - 100 Cr",
+                        "> 100 Cr"],
             type: "category"
         },
         yAxis: {
@@ -45,7 +51,7 @@ function plot_auth_cap_data(auth_cap_data) {
         },
         series: [
             {
-                name: "AUTHORIZE_CAP",
+                name: "Authorized Cap",
                 data: auth_cap
             }
         ]
@@ -88,7 +94,6 @@ function plot_principle_business_activity(principle_business_activity) {
     for (let x = 0; x < 10; x++) {
         principle_business.push([principle_business_activity[x][0], principle_business_activity[x][1]]);
     }
-
     Highcharts.chart("principle_business_activity", {
         chart: {
             type: "column"
@@ -97,6 +102,16 @@ function plot_principle_business_activity(principle_business_activity) {
             text: "Top registrations by Principal Business Activity for the year 2015"
         },
         xAxis: {
+            categories :  [ "Construction",
+                            "Community, personal & Social Services",
+                            "Agriculture and Allied Activities",
+                            "Manufacturing (Machinery & Equipments)", 
+                            "Real Estate and Renting",
+                            "Manufacturing (Metals & Chemicals, and products thereof)",
+                            "Transport, storage and Communications",
+                            "Manufacturing (Food stuffs)",
+                            "Finance",
+                            "Manufacturing (Textiles)"],
             type: "2015"
         },
         yAxis: {
@@ -141,7 +156,6 @@ function plot_aggregating_registrations_count(aggregating_registrations_count) {
         data_2017.push(aggregating_registrations_count['2017'][arc_list[arc]])
         data_2018.push(aggregating_registrations_count['2018'][arc_list[arc]])
     }
-    console.log(data_2011)
 
     Highcharts.chart('aggregating_registrations_count', {
         chart: {
